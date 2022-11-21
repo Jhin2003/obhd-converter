@@ -1,0 +1,27 @@
+@mixin section-margin {
+    margin: 50px;
+}
+
+$color-one : #A5A5A5;
+$color-two : #D9D9D9;
+$bacground-color : #D7D7D7;
+
+.Conversiontable{
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.basetable {
+    @include section-margin;
+    display: flex;
+}
+
+.Numberinputtable {
+    @include section-margin;
+}
+
+
+.Resultstable {
+    @include section-margin;
+}
