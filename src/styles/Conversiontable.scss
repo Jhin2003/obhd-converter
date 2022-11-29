@@ -1,10 +1,16 @@
+$color-one :#BB2323;
+$color-two: #FCFCFC;
+
 @mixin section-margin {
     margin: 50px;
+    width: 60vw;
+    background-color: $color-one;
+    border: rgb(37, 32, 32) solid;
+    display: flex;
+    justify-content: center;
 }
 
-$color-one : #A5A5A5;
-$color-two : #D9D9D9;
-$bacground-color : #D7D7D7;
+
 
 .Conversiontable{
   display: flex;
@@ -14,14 +20,84 @@ $bacground-color : #D7D7D7;
 
 .basetable {
     @include section-margin;
-    display: flex;
+    align-items: center;
+   
+    height: 120px;
+    .Firstchoices{
+        display: flex;
+        justify-content: center;
+         height: 66px;
+         width: 280px;
+        select {
+                width: 80%;
+                height: 100%;
+                padding: 3px;
+                font-size: 30px;
+                appearance: none;
+                border: black solid;
+            }
+        select:focus{
+            outline: none;
+        }
+    }
+    .to{
+        color: $color-two;
+    }
+   .Secondchoices {
+        display: flex;
+        justify-content: center;
+        height: 66px;
+        width: 280px;
+        select {
+                width: 80%;
+                height: 100%;
+                padding: 3px;
+                font-size: 30px;               
+                appearance: none;
+                border: black solid;
+            }
+          select:focus{
+            outline: none;
+        }
+   }
 }
 
 .Numberinputtable {
     @include section-margin;
+    height: 100px;
+    form{  
+        width: 90%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        input{
+            height: 60%;
+            width: 80%;
+            margin: 5px;
+            font-size: 30px;
+            appearance: none;
+            border: black solid;
+        }
+
+        input:focus{
+           outline: none;
+        }
+        button{
+            height: 62%;
+            width: 20%;
+            font-size: 30px;
+            appearance: none;
+            border: black solid;
+        }
+    }
 }
 
 
 .Resultstable {
     @include section-margin;
+    height: 180px;
+    p{
+        font-size: 60px;
+        font-weight: bold;
+    }
 }
